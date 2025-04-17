@@ -1,0 +1,284 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 90px; /* Hauteur de l'en-tête */
+    background-color: #070ecb; /* Couleur de fond pour l'en-tête */
+    display: flex;
+    justify-content: space-between; /* Espace entre les éléments */
+}
+header img{
+    width: 70px;
+    height: 70px;
+    margin: 10px 20px;
+    border-radius: 50%; /* Arrondit l'image */
+}
+header nav ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Permet au contenu principal de prendre tout l'espace disponible */
+}
+
+footer {
+    background-color: #f1f1f1; /* Couleur de fond pour le footer */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* menu */
+.menu-toggle {
+    display: none;
+    background-color: rgb(11, 36, 175);
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu.active {
+    right: 0; /* Fait apparaître le menu */
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    margin: 25px 0;
+    padding: 10px 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.6s ease;
+    text-decoration: underline;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.menu-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Rend l'image circulaire */
+    margin-bottom: 10px;
+}
+
+.menu-header p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+.accueil{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 700px;
+}
+.accueil img{
+    padding: 40px;
+    width: 95%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'image */
+    transition: transform 0.3s ease; /* Animation pour l'image */
+}
+.accueil .img-texte{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px; /* Arrondit les coins du texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+}
+@media (max-width: 768px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header .logo{
+        display: flex;
+        font-size: 14px; /* Ajuste la taille de la police pour les petits écrans */
+        color: white;
+    }
+    header .logo h1{
+        margin-left: 10px; /* Ajuste la marge pour les petits écrans */
+        padding: 20px 0px;
+    }
+    header .logo h1 a{
+        text-decoration: none;
+        color: white;
+        font-size: 24px; /* Ajuste la taille de la police pour les petits écrans */
+    }
+    header img {
+        margin: 15px; /* Ajuste la marge pour les petits écrans */
+        width: 50px; /* Ajuste la taille de l'image pour les petits écrans */
+        height: 50px;
+
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -350px; /* Cache le menu hors de l'écran */
+        width: 250px;
+        height: 100%;
+        background-color: rgb(1, 29, 185);
+        color: rgb(208, 208, 208);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease; /* Animation pour le menu */
+        z-index: 999;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.menu.active {
+        display: flex; /* Affiche le menu lorsqu'il est actif */
+    }
+    .menu ul{
+        flex-direction: column; /* Aligne les éléments du menu verticalement */
+    }
+    .menu ul li{
+        margin: 20px 0; /* Ajuste la marge pour les petits écrans */
+        padding: 0px 20px;
+    }
+    .menu ul li a:hover{
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        transition: 0.6s ease;
+    }
+    .accueil{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 300px;
+    }
+    .accueil img{
+        padding: 14px;
+        width: 95%;
+        height: 100%;
+        object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'image */
+        transition: transform 0.3s ease; /* Animation pour l'image */}
+    .accueil .img-texte{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px; /* Arrondit les coins du texte */
+        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 50px;
+    }
+    .services h2{
+        text-align: center;
+        color: rgb(1, 29, 185);
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .services .service-item{
+        width: 90%;
+        height: 200px;
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(1, 29, 185);
+        color: white;
+        border-radius: 10px; /* Arrondit les coins */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour le service */
+    }
+    .services .service-item:hover{
+        background-color: rgb(1, 29, 185);
+        color: white;
+        transform: scale(1.05); /* Agrandit légèrement le service au survol */
+        transition: transform 0.3s ease; /* Animation pour le service */
+    }
+    .services .service-item i{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .services .service-item h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .services .service-item p{
+        font-size: 16px;
+        text-align: center;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgb(1, 29, 185);
+        color: white;
+    }
+    footer ul li a{
+        color: white;
+        }
+}
