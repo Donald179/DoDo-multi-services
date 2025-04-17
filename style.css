@@ -4,6 +4,7 @@ html, body {
     height: 100%;
 }
 
+/* le haut de page avec la barre de navigation */
 header{
     width: 100%;
     height: 90px; /* Hauteur de l'en-tête */
@@ -22,6 +23,7 @@ header nav ul {
     padding: 0; /* Supprime le padding par défaut */
 }
 
+/* le corps du code */
 body {
     display: flex;
     flex-direction: column;
@@ -31,6 +33,7 @@ main {
     flex: 1; /* Permet au contenu principal de prendre tout l'espace disponible */
 }
 
+/* le bas de page */
 footer {
     background-color: #f1f1f1; /* Couleur de fond pour le footer */
     text-align: center;
@@ -87,6 +90,7 @@ footer {
     text-decoration: underline;
 }
 
+/* le menu pour les téléphones l'image et le titre */
 .menu-header {
     display: flex;
     flex-direction: column;
@@ -107,6 +111,8 @@ footer {
     font-weight: bold;
     margin: 0;
 }
+
+/* la photo d'accueil avec le texte */
 .accueil{
     position: relative;
     display: inline-block;
@@ -135,6 +141,8 @@ footer {
     border-radius: 10px; /* Arrondit les coins du texte */
     background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
 }
+
+/* Tous les reglages propre aux téléphones */
 @media (max-width: 768px) {
     *{
         padding: 0;
